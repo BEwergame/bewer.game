@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BEwer Game — ไอดี eFootball พร้อมส่ง</title>
+    <link rel="icon" href="data:image/jpeg;base64,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">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --bg:#f6f6fb;
+        --card:#ffffff;
+        --line:#e8e8f2;
+        --line-soft:#f0f0f7;
+        --text:#15161d;
+        --muted:#6b6f80;
+        --muted-2:#9497a8;
+        --brand:#7c3aed;
+        --brand-2:#a855f7;
+        --brand-light:#f3edff;
+        --ink:#120d22;
+        --ok:#15803d;
+        --ok-bg:#f0fdf4;
+        --ok-line:#bbf7d0;
+        --warn:#b45309;
+        --r:16px;
+        --r-lg:22px;
+        --shadow-sm:0 1px 3px rgba(20,20,50,.05);
+        --shadow:0 10px 30px rgba(20,20,50,.08);
+        --shadow-lg:0 24px 60px rgba(60,20,120,.18);
+      }
+      *{margin:0;padding:0;box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        font-family:'Noto Sans Thai',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+        background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;
+      }
+      a{color:inherit;text-decoration:none}
+      img{display:block;max-width:100%}
+      button,input,select{font-family:inherit}
+      .wrap{width:min(1180px,92vw);margin-inline:auto}
+
+      /* ── แถบเมนู ── */
+      .nav{background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+        position:sticky;top:0;z-index:60}
+      .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px 0}
+      .logo{display:flex;align-items:center;gap:11px}
+      .logo-mark{width:42px;height:42px;border-radius:12px;overflow:hidden;flex:none;
+        background-image:url('data:image/jpeg;base64,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');background-size:cover;background-position:center;
+        box-shadow:0 3px 12px rgba(124,58,237,.4)}
+      .logo-text b{display:block;font-size:16px;font-weight:800;letter-spacing:-.01em}
+      .logo-text span{display:block;font-size:10px;color:var(--muted-2);letter-spacing:1.2px;font-weight:600}
+      .nav-links{display:flex;align-items:center;gap:8px}
+
+      /* ── ปุ่ม ── */
+      .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:12px;
+        font-weight:700;font-size:14.5px;border:1.5px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap}
+      .btn.primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(124,58,237,.3)}
+      .btn.primary:hover{background:#6d28d9;transform:translateY(-1px);box-shadow:0 12px 26px rgba(124,58,237,.36)}
+      .btn.outline{background:#fff;border-color:var(--line);color:var(--text)}
+      .btn.outline:hover{border-color:var(--brand);color:var(--brand)}
+      .btn.ghost-light{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff}
+      .btn.ghost-light:hover{background:rgba(255,255,255,.18)}
+      .btn.sm{padding:9px 16px;font-size:13.5px;border-radius:10px}
+      .btn.block{width:100%}
+
+      /* ── ส่วนหัว (โทนเข้ม ให้เข้ากับโลโก้) ── */
+      .hero{position:relative;background:
+          radial-gradient(1100px 480px at 82% 8%,rgba(168,85,247,.32),transparent 62%),
+          radial-gradient(760px 420px at 8% 92%,rgba(99,102,241,.24),transparent 60%),
+          linear-gradient(160deg,#17102b 0%,#120d22 60%,#0d0a19 100%);
+        color:#fff;overflow:hidden;padding:60px 0 66px}
+      .hero::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:70px;
+        background:linear-gradient(to bottom,transparent,var(--bg))}
+      .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}
+      .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:99px;
+        background:rgba(168,85,247,.18);border:1px solid rgba(196,162,253,.34);color:#e9d5ff;
+        font-size:12.5px;font-weight:700;margin-bottom:18px}
+      .dot-live{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.22)}
+      .hero h1{font-size:clamp(31px,4.6vw,49px);font-weight:800;line-height:1.16;letter-spacing:-.025em}
+      .hero h1 .accent{background:linear-gradient(96deg,#c4b5fd,#f0abfc);-webkit-background-clip:text;
+        background-clip:text;-webkit-text-fill-color:transparent}
+      .hero p.lead{color:#c3bcd8;font-size:15.5px;margin:16px 0 26px;max-width:50ch}
+      .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+      .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:34px}
+      .hstat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:14px;
+        padding:14px 12px;text-align:center;backdrop-filter:blur(6px)}
+      .hstat b{display:block;font-size:22px;font-weight:800;letter-spacing:-.01em;color:#fff;line-height:1.25}
+      .hstat span{display:block;margin-top:5px;font-size:12px;color:#c4bcda;font-weight:600;line-height:1.4}
+
+      /* การ์ดลอยฝั่งขวา */
+      .hero-art{position:relative;height:432px}
+      .float-card{position:absolute;width:232px;background:rgba(255,255,255,.055);border-radius:18px;
+        border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);overflow:hidden;
+        box-shadow:0 20px 46px rgba(0,0,0,.42)}
+      .float-card .fc-img{width:100%;height:0;padding-top:62.5%;background:#1c1533;position:relative;overflow:hidden}
+      .float-card .fc-img img{position:absolute;inset:0;width:100%;height:100%;max-width:100%;object-fit:cover}
+      .float-card .fc-body{padding:12px 14px}
+      .float-card .fc-title{font-size:12.5px;font-weight:700;color:#fff;margin-bottom:7px}
+      .float-card .fc-price{display:flex;justify-content:space-between;align-items:center;gap:8px}
+      .float-card .fc-price b{color:#f5d0fe;font-size:16.5px;font-weight:800}
+      .fc-cat{font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;
+        background:rgba(255,255,255,.12);color:#ddd6fe}
+      .float-card.featured{
+        border-color:rgba(251,191,36,.55);
+        box-shadow:0 0 0 3px rgba(251,191,36,.12),0 22px 50px rgba(0,0,0,.5);
+        animation:fc-float 3.4s ease-in-out infinite,fc-pop .55s cubic-bezier(.34,1.56,.64,1) backwards}
+      .fc-recommend{position:absolute;top:9px;left:9px;z-index:2;background:linear-gradient(100deg,#fbbf24,#f59e0b);
+        color:#3d2c00;font-size:10px;font-weight:800;padding:4px 10px;border-radius:999px;
+        box-shadow:0 3px 10px rgba(245,158,11,.45)}
+      @keyframes fc-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+      @keyframes fc-pop{from{opacity:0;transform:translateY(22px) scale(.92)}to{opacity:1;transform:none}}
+      .float-card.fc1,.float-card.fc2,.float-card.fc3{width:228px}
+      .fc1{top:0;right:266px;z-index:3}
+      .fc2{top:14px;right:0;z-index:2}
+      .fc3{top:218px;right:132px;z-index:1}
+
+      /* ── หัวข้อส่วน ── */
+      .section{padding:56px 0}
+      .section.tight{padding:44px 0}
+      .sec-label{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;color:var(--brand);
+        text-transform:uppercase;letter-spacing:.09em;margin-bottom:9px}
+      .sec-label::before{content:'';width:18px;height:3px;border-radius:2px;background:var(--brand)}
+      .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:26px;flex-wrap:wrap;gap:12px}
+      .sec-head h2{font-size:clamp(21px,3vw,27px);font-weight:800;letter-spacing:-.02em}
+      .sec-head p{color:var(--muted);font-size:14px;margin-top:5px;max-width:56ch}
+
+      /* ── ตัวกรอง ── */
+      .toolbar{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px;
+        margin-bottom:20px;box-shadow:var(--shadow-sm)}
+      .filters{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+      .filters-2{display:flex;gap:10px;align-items:stretch;margin-top:11px;padding-top:12px;
+        border-top:1px solid var(--line)}
+      .chip{padding:9px 16px;border-radius:99px;background:var(--bg);border:1.5px solid transparent;color:var(--muted);
+        font-weight:700;font-size:13.5px;cursor:pointer;transition:.15s}
+      .chip:hover{color:var(--text)}
+      .chip.active{background:var(--brand);color:#fff;box-shadow:0 4px 12px rgba(124,58,237,.28)}
+      .search-box{display:flex;flex-direction:column;justify-content:center;gap:1px;flex:1;min-width:190px;
+        background:#fff;border:1.5px solid var(--line);border-radius:13px;padding:8px 14px;transition:.15s}
+      .search-box:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px rgba(124,58,237,.13)}
+      .search-box label{font-size:11px;color:var(--muted-2);font-weight:700;letter-spacing:.02em}
+      .search-box input{border:0;outline:0;font-size:15.5px;width:100%;background:none;font-weight:700;
+        color:var(--text);padding:1px 0}
+      .search-box input::placeholder{color:#b9b4c6;font-weight:600}
+      #sort{border:1.5px solid var(--line);background:#fff;border-radius:13px;padding:0 34px 0 14px;
+        font-size:14.5px;cursor:pointer;font-weight:700;color:var(--text);min-width:168px;
+        appearance:none;-webkit-appearance:none;
+        background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%237c3aed' stroke-width='2'><path d='M1 1l5 5 5-5'/></svg>");
+        background-repeat:no-repeat;background-position:right 13px center}
+      #sort:focus{outline:0;border-color:var(--brand);box-shadow:0 0 0 3px rgba(124,58,237,.13)}
+      .result-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;
+        margin-bottom:18px;flex-wrap:wrap}
+      .result-count{font-size:13.5px;color:var(--muted);font-weight:600}
+      .result-count b{color:var(--text)}
+      .btn-reset{background:none;border:0;color:var(--brand);font-size:13px;font-weight:700;cursor:pointer;padding:4px}
+
+      /* ── การ์ดสินค้า ── */
+      .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:18px}
+      .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+        cursor:pointer;transition:.2s;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+      .card:hover{box-shadow:var(--shadow);transform:translateY(-4px);border-color:#ddd6fe}
+      .card-media{position:relative;width:100%;height:0;padding-top:100%;overflow:hidden;
+        background:linear-gradient(135deg,#efe9ff,#f7f4ff)}
+      .card-media img{position:absolute;inset:0;width:100%;height:100%;max-width:100%;object-fit:cover;transition:.35s}
+      .card:hover .card-media img{transform:scale(1.045)}
+      .card-cat{position:absolute;top:10px;left:10px;right:70px;width:fit-content;max-width:calc(100% - 80px);
+        font-size:10.5px;font-weight:800;padding:4px 10px;border-radius:7px;backdrop-filter:blur(6px);
+        overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+      .cat-ep{background:rgba(124,58,237,.9);color:#fff}
+      .cat-no{background:rgba(225,29,72,.9);color:#fff}
+      .cat-id{background:rgba(22,163,74,.9);color:#fff}
+      .card-ready{position:absolute;top:10px;right:10px;font-size:10px;font-weight:700;padding:4px 9px;
+        border-radius:7px;background:rgba(17,18,31,.62);color:#d1fae5;backdrop-filter:blur(6px)}
+      .card-body{padding:14px 15px 15px;display:flex;flex-direction:column;flex:1}
+      .card h3{font-size:13.5px;font-weight:700;color:var(--muted);margin-bottom:3px}
+      .card .price{font-size:20px;font-weight:800;color:var(--text);letter-spacing:-.02em}
+      .card-inst{margin-top:11px;padding-top:11px;border-top:1px dashed var(--line);
+        display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;
+        font-size:11.5px;color:var(--muted);font-weight:600}
+      .card-inst span{white-space:nowrap}
+      .card-inst b{color:var(--ok);font-weight:800}
+      .card-cta{margin-top:12px;text-align:center;font-size:13px;font-weight:700;color:var(--brand);
+        background:var(--brand-light);border-radius:10px;padding:9px;transition:.15s}
+      .card:hover .card-cta{background:var(--brand);color:#fff}
+      .empty{grid-column:1/-1;text-align:center;padding:64px 20px;color:var(--muted);
+        border:1.5px dashed var(--line);border-radius:var(--r);background:var(--card)}
+      .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+      .skeleton{background:linear-gradient(100deg,#eee 30%,#f6f6fb 50%,#eee 70%);background-size:220% 100%;
+        animation:sk 1.3s infinite;border-radius:var(--r);height:300px}
+      @keyframes sk{to{background-position:-120% 0}}
+
+      /* ── ขั้นตอน ── */
+      .step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px}
+      .step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 20px;
+        position:relative;box-shadow:var(--shadow-sm)}
+      .step-no{width:34px;height:34px;border-radius:10px;background:var(--brand);color:#fff;
+        display:grid;place-items:center;font-weight:800;font-size:14px;margin-bottom:13px}
+      .step h3{font-size:15px;font-weight:700;margin-bottom:6px}
+      .step p{font-size:13px;color:var(--muted);line-height:1.65}
+
+      .notice{margin-top:20px;background:#fffbeb;border:1px solid #fde68a;border-radius:var(--r);padding:19px 22px}
+      .notice b{color:var(--warn);font-size:14.5px}
+      .notice ul{margin:9px 0 0 19px;color:#8a6d3b;font-size:13.5px;display:grid;gap:6px}
+
+      /* ── ติดต่อ ── */
+      .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:14px}
+      .contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;
+        transition:.18s;box-shadow:var(--shadow-sm);display:block}
+      .contact-card:hover{border-color:var(--brand);box-shadow:var(--shadow);transform:translateY(-3px)}
+      .contact-label{font-size:11.5px;color:var(--muted-2);margin-bottom:5px;font-weight:700;letter-spacing:.04em}
+      .contact-value{font-size:16.5px;font-weight:700}
+      .contact-go{font-size:12.5px;color:var(--brand);margin-top:9px;font-weight:700}
+
+      .foot{background:var(--ink);color:#8f88a8;padding:34px 0;text-align:center;font-size:12.5px;margin-top:44px}
+      .foot b{color:#fff;display:block;font-size:14.5px;margin-bottom:5px;font-weight:800}
+
+      /* ── หน้าต่างรายละเอียด ── */
+      .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;
+        background:rgba(14,10,26,.62);backdrop-filter:blur(4px)}
+      .modal.open{display:flex;animation:fade .18s ease}
+      @keyframes fade{from{opacity:0}to{opacity:1}}
+      .modal-box{position:relative;width:min(900px,96vw);max-height:92vh;overflow:auto;border-radius:var(--r-lg);
+        background:#fff;box-shadow:var(--shadow-lg);animation:rise .24s cubic-bezier(.2,.9,.3,1)}
+      @keyframes rise{from{transform:translateY(16px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+      .modal-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+      .m-main,.m-info{min-width:0;max-width:100%}
+      .m-main{position:relative;width:100%;height:0;padding-top:100%;overflow:hidden;
+        background:linear-gradient(135deg,#efe9ff,#f7f4ff)}
+      .m-main img{position:absolute;inset:0;width:100%;height:100%;max-width:100%;object-fit:cover}
+      img[data-broken]{object-fit:contain;padding:20%;opacity:.22}
+      .m-info{padding:30px;display:flex;flex-direction:column;gap:15px}
+      .modal-close{position:absolute;top:12px;right:12px;z-index:10;width:42px;height:42px;border-radius:50%;
+        border:2px solid #fff;background:rgba(17,18,31,.72);color:#fff;font-size:20px;font-weight:700;line-height:1;
+        cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.3);transition:.15s}
+      .modal-close:hover{background:#e11d48;transform:scale(1.06)}
+      .m-cat{align-self:flex-start;font-size:11.5px;font-weight:800;padding:5px 12px;border-radius:8px;
+        background:var(--brand-light);color:var(--brand)}
+      .m-info h2{font-size:22px;font-weight:800;letter-spacing:-.02em}
+      .m-price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+      .m-price{font-size:33px;font-weight:800;color:var(--text);letter-spacing:-.03em;line-height:1.1}
+      .m-price-note{font-size:12.5px;color:var(--muted);font-weight:600}
+
+      .m-inst{display:grid;gap:8px;background:var(--ok-bg);border:1.5px solid var(--ok-line);
+        border-radius:13px;padding:14px 16px}
+      .m-inst-head{font-size:12px;font-weight:800;color:var(--ok);letter-spacing:.03em;text-transform:uppercase}
+      .m-inst-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+      .m-inst-row span{color:#166534;font-weight:600;font-size:13.5px}
+      .m-inst-row b{color:var(--ok);font-weight:800;font-size:17px}
+      .m-inst.warn{background:#fffbeb;border-color:#fde68a}
+      .m-inst.warn .m-inst-head,.m-inst.warn .m-inst-row b{color:var(--warn)}
+      .m-inst.warn .m-inst-row span{color:#8a6d3b}
+
+      .m-specs{width:100%;border-collapse:collapse;font-size:14px}
+      .m-specs th,.m-specs td{text-align:left;padding:9px 0;border-bottom:1px dashed var(--line);
+        font-weight:500;color:var(--muted)}
+      .m-specs td{color:var(--text);font-weight:700;text-align:right}
+      .m-note{background:var(--brand-light);border-radius:12px;padding:14px 16px;font-size:13.5px;color:#5b21b6}
+      .m-note>b{display:block;margin-bottom:6px;font-size:13px;letter-spacing:.02em}
+      .m-note ol b{color:#4c1d95;font-weight:800}
+      .m-note ol{margin:0 0 0 18px;display:grid;gap:5px;line-height:1.6}
+      .m-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+      @media(max-width:980px){
+        .hero-inner{grid-template-columns:1fr}
+        .hero-art{display:none}
+        .modal-body{grid-template-columns:1fr}
+      }
+      @media(max-width:640px){
+        .hero{padding:44px 0 50px}
+        .hero-stats{grid-template-columns:1fr 1fr;gap:9px;margin-top:26px}
+        .hstat{padding:12px 10px;border-radius:12px}
+        .hstat b{font-size:19px}
+        .hstat span{font-size:11.5px}
+        .section{padding:42px 0}
+        .m-info{padding:24px 20px}
+        .nav-links .btn:first-child{display:none}
+        .step-grid{grid-template-columns:1fr 1fr;gap:11px}
+        .m-main{padding-top:70%}
+        .m-actions{grid-template-columns:1fr}
+        .card-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:13px}
+        .card .price{font-size:18px}
+        .filters-2{flex-direction:column}
+        .search-box,#sort{width:100%;min-width:0}
+        #sort{padding-top:12px;padding-bottom:12px}
+        .chip{padding:8px 14px;font-size:13px}
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="wrap nav-inner">
+        <a href="#" class="logo">
+          <div class="logo-mark" role="img" aria-label="BEwer Game"></div>
+          <div class="logo-text"><b>BEwer Game</b><span>EFOOTBALL ACCOUNT STORE</span></div>
+        </a>
+        <div class="nav-links">
+          <a href="https://www.facebook.com/efootballbewer" target="_blank" rel="noopener" class="btn outline sm">Facebook</a>
+          <a href="https://lin.ee/YFURb8X" target="_blank" rel="noopener" class="btn primary sm">ทักแชทสั่งซื้อ</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <span class="eyebrow"><span class="dot-live"></span> เปิดรับออเดอร์ทุกวัน</span>
+          <h1>ไอดี eFootball <span class="accent">คัดคุณภาพ</span><br>พร้อมส่งทันที</h1>
+          <p class="lead">
+            ราคาแสดงชัดเจนทุกรายการ ไม่มีค่าใช้จ่ายแอบแฝง
+            เลือกผ่อนได้ด้วยเงินดาวน์เพียง 40% รับไอดีไปใช้ก่อน แล้วค่อยผ่อนส่วนที่เหลือ
+          </p>
+          <div class="hero-btns">
+            <button type="button" class="btn primary" onclick="goCatalog()">เลือกดูไอดีทั้งหมด</button>
+            <a href="https://lin.ee/YFURb8X" target="_blank" rel="noopener" class="btn ghost-light">สอบถามทาง LINE</a>
+          </div>
+          <div class="hero-stats" id="hero-stats"></div>
+        </div>
+        <div class="hero-art" id="hero-art"></div>
+      </div>
+    </header>
+
+
+    <section class="section" id="catalog">
+      <div class="wrap">
+        <div class="sec-label">รายการสินค้า</div>
+        <div class="sec-head">
+          <div>
+            <h2>ไอดีที่เปิดจำหน่าย</h2>
+            <p>ทุกรายการเป็นไอดีจริงที่มีอยู่ในสต็อก กดเข้าไปดูเงื่อนไขการผ่อนของแต่ละรายการได้เลย</p>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="filters">
+            <button class="chip active" onclick="selectPriceRange('ALL',this)">ทั้งหมด</button>
+            <button class="chip" onclick="selectPriceRange('LOW',this)">ไม่เกิน 1,000</button>
+            <button class="chip" onclick="selectPriceRange('MID',this)">1,000 – 2,999</button>
+            <button class="chip" onclick="selectPriceRange('HIGH',this)">3,000 ขึ้นไป</button>
+          </div>
+
+          <div class="filters-2">
+            <div class="search-box">
+              <label for="max-price-input">งบไม่เกิน (บาท)</label>
+              <input type="text" id="max-price-input" inputmode="numeric" placeholder="พิมพ์ตัวเลข เช่น 1500"
+                oninput="onMaxPriceInput(this)">
+            </div>
+            <select id="sort" onchange="renderGrid()" aria-label="เรียงลำดับ">
+              <option value="price-high">ราคาสูง → ต่ำ</option>
+              <option value="price-low">ราคาต่ำ → สูง</option>
+              <option value="newest">ลงใหม่ล่าสุด</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="result-bar">
+          <div class="result-count" id="result-count"></div>
+          <button class="btn-reset" onclick="resetFilters()">ล้างตัวกรอง</button>
+        </div>
+
+        <div id="content-area"><div class="card-grid">
+          <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="wrap">
+        <div class="sec-label">ขั้นตอนการสั่งซื้อ</div>
+        <div class="sec-head"><div><h2>สั่งซื้อง่าย ๆ 4 ขั้นตอน</h2></div></div>
+        <div class="step-grid">
+          <div class="step"><div class="step-no">1</div><h3>เลือกไอดี</h3>
+            <p>เลือกรายการที่ต้องการจากหน้านี้ แล้วจดรหัสสินค้าไว้</p></div>
+          <div class="step"><div class="step-no">2</div><h3>แจ้งแอดมิน</h3>
+            <p>ทักทาง LINE หรือ Facebook พร้อมแจ้งรหัสสินค้าเพื่อยืนยันว่ายังว่าง</p></div>
+          <div class="step"><div class="step-no">3</div><h3>ชำระเงิน</h3>
+            <p>โอนเต็มจำนวน หรือวางดาวน์ 40% แล้วส่งสลิป ระบบตรวจสอบให้อัตโนมัติ</p></div>
+          <div class="step"><div class="step-no">4</div><h3>รับไอดี</h3>
+            <p>ยืนยันยอดแล้วรับข้อมูลไอดีทันที พร้อมวิธีเข้าใช้งาน</p></div>
+        </div>
+
+        <div class="notice">
+          <b>เงื่อนไขการผ่อนชำระ</b>
+          <ul>
+            <li>วางเงินดาวน์ขั้นต่ำ <b>40%</b> ของราคาเต็ม จึงจะรับไอดีไปใช้ได้</li>
+            <li>ราคาไม่เกิน 500 บาท ผ่อนได้ 7 วัน · ไม่เกิน 1,000 บาท ผ่อนได้ 14 วัน</li>
+            <li>ราคาไม่เกิน 2,000 บาท ผ่อนได้ 21 วัน · ไม่เกิน 5,000 บาท ผ่อนได้ 30 วัน</li>
+            <li>ราคาเกิน 5,000 บาท กรุณาสอบถามเงื่อนไขกับแอดมินก่อนสั่งซื้อ</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="wrap">
+        <div class="sec-label">ช่องทางติดต่อ</div>
+        <div class="sec-head"><div><h2>สอบถามหรือสั่งซื้อ</h2></div></div>
+        <div class="contact-grid">
+          <a class="contact-card" href="https://lin.ee/YFURb8X" target="_blank" rel="noopener">
+            <div class="contact-label">แนะนำ · ตอบไวที่สุด</div>
+            <div class="contact-value">LINE Official</div>
+            <div class="contact-go">เปิดแชท LINE →</div>
+          </a>
+          <a class="contact-card" href="https://www.facebook.com/efootballbewer" target="_blank" rel="noopener">
+            <div class="contact-label">เพจหลัก</div>
+            <div class="contact-value">Facebook</div>
+            <div class="contact-go">ทักเพจ Facebook →</div>
+          </a>
+          <div class="contact-card">
+            <div class="contact-label">เวลาทำการ</div>
+            <div class="contact-value">ทุกวัน</div>
+            <div class="contact-go">ตอบกลับเร็วที่สุดเท่าที่ทำได้</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="foot">
+      <div class="wrap">
+        <b>BEwer Game</b>
+        ร้านจำหน่ายไอดี eFootball · © <span id="year"></span> สงวนลิขสิทธิ์
+      </div>
+    </div>
+
+    <div class="modal" id="item-modal" onclick="if(event.target===this)closeModal()">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()" aria-label="ปิดหน้าต่าง">&times;</button>
+        <div class="modal-body">
+          <div class="m-main"><img id="m-image" alt="" onerror="imgFallback(this)"></div>
+          <div class="m-info">
+            <span class="m-cat" id="m-category">EP.</span>
+            <h2>eFootball <span id="m-code">-</span></h2>
+            <div class="m-price-row">
+              <div class="m-price">฿<span id="m-price">0</span></div>
+              <span class="m-price-note">ราคาเต็ม · จ่ายครบรับไอดีทันที</span>
+            </div>
+
+            <div class="m-inst" id="m-inst">
+              <div class="m-inst-head" id="m-inst-head">ผ่อนชำระได้</div>
+              <div class="m-inst-row"><span>เงินดาวน์ 40%</span><b id="m-down">฿0</b></div>
+              <div class="m-inst-row"><span id="m-rest-label">ยอดคงเหลือ</span><b id="m-rest">฿0</b></div>
+            </div>
+
+            <table class="m-specs">
+              <tr><th>รหัสสินค้า</th><td id="m-code-2">-</td></tr>
+              <tr><th>ราคาเต็ม</th><td id="m-price-2">-</td></tr>
+              <tr><th>เงินดาวน์ 40%</th><td id="m-down-2">-</td></tr>
+              <tr><th>ยอดผ่อนคงเหลือ</th><td id="m-rest-2">-</td></tr>
+              <tr><th>ระยะเวลาผ่อน</th><td id="m-days-2">-</td></tr>
+            </table>
+
+            <div class="m-note">
+              <b>ขั้นตอนการผ่อน</b>
+              <ol id="m-steps"></ol>
+            </div>
+
+            <div class="m-actions">
+              <a href="https://www.facebook.com/efootballbewer" target="_blank" rel="noopener" class="btn outline">Facebook</a>
+              <a href="https://lin.ee/YFURb8X" target="_blank" rel="noopener" class="btn primary">สั่งซื้อทาง LINE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let allItems = [];
+      let selectedCategory = 'ALL';
+      let selectedRange = 'ALL';
+
+      /* ══════════ เงื่อนไขผ่อน — แก้ที่เดียว มีผลทุกการ์ด ══════════ */
+      const DOWN_PCT = 40;
+      const INSTALLMENT_PLANS = [
+        { maxPrice: 500,  days: 7  },
+        { maxPrice: 1000, days: 14 },
+        { maxPrice: 2000, days: 21 },
+        { maxPrice: 5000, days: 30 }
+      ];
+
+      const IMG_FALLBACK_ = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">' +
+        '<rect x="6" y="12" width="52" height="40" rx="5"/><circle cx="22" cy="27" r="5"/><path d="M8 46l14-13 10 9 8-7 16 15"/></svg>');
+
+      /* เลื่อนลงไปที่รูปไอดี โดยเว้นที่ให้แถบเมนูด้านบน */
+      function goCatalog(){
+        const target = document.getElementById('content-area') || document.getElementById('catalog');
+        if (!target) return;
+        const nav = document.querySelector('.nav');
+        const navH = nav ? nav.getBoundingClientRect().height : 0;
+        const y = target.getBoundingClientRect().top + window.pageYOffset - navH - 16;
+        try { window.scrollTo({ top: y, behavior: 'smooth' }); }
+        catch (e) { window.scrollTo(0, y); }
+      }
+
+      function imgFallback(el){
+        const src = el.getAttribute('src') || '';
+        if (!src || src === IMG_FALLBACK_ || el.dataset.broken) return;
+        el.dataset.broken = '1';
+        el.src = IMG_FALLBACK_;
+      }
+
+      /* แท็กรูปของการ์ด — ถ้าไม่มีลิงก์รูปให้ใช้ไอคอนแทนเลย */
+      function imgTag(url){
+        return url
+          ? '<img src="' + url + '" loading="lazy" alt="" onerror="imgFallback(this)">'
+          : '<img src="' + IMG_FALLBACK_ + '" data-broken="1" alt="">';
+      }
+
+      /* ใส่รูปใหม่ + ล้างสถานะ "รูปเสีย" ของรอบก่อน */
+      function setImage(el, url){
+        el.removeAttribute('data-broken');
+        if (url){ el.src = url; } else { el.dataset.broken = '1'; el.src = IMG_FALLBACK_; }
+      }
+
+      function installmentInfo(price){
+        const p = Number(price) || 0;
+        const down = Math.ceil(p * DOWN_PCT / 100);
+        let days = null;
+        for (let i = 0; i < INSTALLMENT_PLANS.length; i++){
+          if (p <= INSTALLMENT_PLANS[i].maxPrice){ days = INSTALLMENT_PLANS[i].days; break; }
+        }
+        return { down: down, rest: p - down, days: days };
+      }
+
+      const baht = function(n){ return '฿' + (Number(n)||0).toLocaleString(); };
+      const catClass = { 'EP.':'cat-ep', 'NO.':'cat-no', 'ID#':'cat-id' };
+
+      function inRange(price, range){
+        if (range === 'LOW')  return price <= 1000;
+        if (range === 'MID')  return price >= 1000 && price <= 2999;
+        if (range === 'HIGH') return price >= 3000;
+        return true;
+      }
+
+      /* ย้ายไฟไปที่ปุ่มที่ระบุ (ไม่ระบุ = ปุ่ม "ทั้งหมด") */
+      function setActiveChip(btn){
+        const chips = document.querySelectorAll('.filters .chip');
+        chips.forEach(function(b){ b.classList.remove('active'); });
+        (btn || chips[0]).classList.add('active');
+      }
+
+      /* พิมพ์งบเมื่อไหร่ ให้ยึดตัวเลขที่พิมพ์เป็นหลัก ปุ่มช่วงราคาที่ติ๊กไว้จะถูกยกเลิก */
+      function onMaxPriceInput(el){
+        el.value = el.value.replace(/\D/g, '');
+        if (el.value !== '' && selectedRange !== 'ALL'){
+          selectedRange = 'ALL';
+          setActiveChip(null);
+        }
+        renderGrid();
+      }
+
+      function selectPriceRange(range, btn){
+        selectedRange = range;
+        document.getElementById('max-price-input').value = '';
+        setActiveChip(btn);
+        renderGrid();
+      }
+
+      function resetFilters(){
+        selectedRange = 'ALL';
+        document.getElementById('max-price-input').value = '';
+        document.getElementById('sort').value = 'price-high';
+        setActiveChip(null);
+        renderGrid();
+      }
+
+      function buildHeroStats(){
+        const el = document.getElementById('hero-stats');
+        if (allItems.length === 0){ el.innerHTML = ''; return; }
+        const prices = allItems.map(function(i){ return Number(i.price)||0; });
+        const min = Math.min.apply(null, prices);
+        const stats = [
+          { n: allItems.length.toLocaleString(), l: 'ไอดีพร้อมส่ง' },
+          { n: baht(min), l: 'เริ่มต้นเพียง' },
+          { n: '40%', l: 'ดาวน์ขั้นต่ำ' },
+          { n: '30 วัน', l: 'ผ่อนได้สูงสุด' }
+        ];
+        el.innerHTML = stats.map(function(s){
+          return '<div class="hstat"><b>' + s.n + '</b><span>' + s.l + '</span></div>';
+        }).join('');
+      }
+
+      function buildHeroCards(){
+        const art = document.getElementById('hero-art');
+        const top = allItems.slice().sort(function(a,b){ return b.price - a.price; }).slice(0,3);
+        if (top.length === 0){ art.innerHTML = ''; return; }
+        const pos = ['fc1','fc2','fc3'];
+        art.innerHTML = top.map(function(item,i){
+          return '<div class="float-card featured ' + (pos[i]||'') + '" style="animation-delay:' + (i*0.15) + 's">' +
+            '<span class="fc-recommend">แนะนำ</span>' +
+            '<div class="fc-img">' + imgTag(item.imageUrl) + '</div>' +
+            '<div class="fc-body">' +
+              '<div class="fc-title">eFootball ' + item.productCode + '</div>' +
+              '<div class="fc-price"><span class="fc-cat">' + item.category + '</span><b>' + baht(item.price) + '</b></div>' +
+            '</div></div>';
+        }).join('');
+      }
+
+      function renderGrid(){
+        const raw = document.getElementById('max-price-input').value.trim();
+        const maxPrice = raw === '' ? null : parseInt(raw, 10);
+        const sortMode = document.getElementById('sort').value;
+
+        let filtered = allItems.filter(function(item){
+          if (selectedCategory !== 'ALL' && item.category !== selectedCategory) return false;
+          if (!inRange(item.price, selectedRange)) return false;
+          if (maxPrice !== null && item.price > maxPrice) return false;
+          return true;
+        });
+
+        if (sortMode === 'price-low')       filtered.sort(function(a,b){ return a.price - b.price; });
+        else if (sortMode === 'price-high') filtered.sort(function(a,b){ return b.price - a.price; });
+        else                                filtered.sort(function(a,b){ return b.dateCreated - a.dateCreated; });
+
+        document.getElementById('result-count').innerHTML =
+          'พบ <b>' + filtered.length.toLocaleString() + '</b> รายการ จากทั้งหมด ' + allItems.length.toLocaleString() + ' รายการ';
+
+        const area = document.getElementById('content-area');
+        if (filtered.length === 0){
+          area.innerHTML = '<div class="empty"><b>ไม่พบไอดีที่ตรงกับเงื่อนไข</b>' +
+            'ลองปรับช่วงราคาหรือกดล้างตัวกรองเพื่อดูรายการทั้งหมด</div>';
+          window._filteredItems = [];
+          return;
+        }
+
+        area.innerHTML = '<div class="card-grid">' + filtered.map(function(item, idx){
+          const inst = installmentInfo(item.price);
+          return '<div class="card" onclick="openModal(' + idx + ')">' +
+            '<div class="card-media">' +
+              imgTag(item.imageUrl) +
+              '<span class="card-cat ' + (catClass[item.category]||'') + '">' + item.category + '</span>' +
+              '<span class="card-ready">พร้อมส่ง</span>' +
+            '</div>' +
+            '<div class="card-body">' +
+              '<h3>รหัส ' + item.productCode + '</h3>' +
+              '<div class="price">' + baht(item.price) + '</div>' +
+              '<div class="card-inst">' +
+                '<span>ดาวน์ <b>' + baht(inst.down) + '</b></span>' +
+                '<span>' + (inst.days ? 'ผ่อน ' + inst.days + ' วัน' : 'สอบถามผ่อน') + '</span>' +
+              '</div>' +
+              '<div class="card-cta">ดูรายละเอียด</div>' +
+            '</div></div>';
+        }).join('') + '</div>';
+
+        window._filteredItems = filtered;
+      }
+
+      function openModal(idx){
+        const item = (window._filteredItems || [])[idx];
+        if (!item) return;
+        const inst = installmentInfo(item.price);
+
+        setImage(document.getElementById('m-image'), item.imageUrl);
+        document.getElementById('m-category').innerText = item.category;
+        document.getElementById('m-code').innerText = item.productCode;
+        document.getElementById('m-code-2').innerText = item.productCode;
+        document.getElementById('m-price').innerText = (Number(item.price)||0).toLocaleString();
+        document.getElementById('m-price-2').innerText = baht(item.price);
+        document.getElementById('m-down').innerText = baht(inst.down);
+        document.getElementById('m-rest').innerText = baht(inst.rest);
+        document.getElementById('m-down-2').innerText = baht(inst.down);
+        document.getElementById('m-rest-2').innerText = baht(inst.rest);
+
+        const box = document.getElementById('m-inst');
+        if (inst.days){
+          box.classList.remove('warn');
+          document.getElementById('m-inst-head').innerText = 'ผ่อนชำระได้ ' + inst.days + ' วัน';
+          document.getElementById('m-rest-label').innerText = 'ยอดคงเหลือ ผ่อนครบใน ' + inst.days + ' วัน';
+          document.getElementById('m-days-2').innerText = 'ไม่เกิน ' + inst.days + ' วัน';
+        } else {
+          box.classList.add('warn');
+          document.getElementById('m-inst-head').innerText = 'สอบถามเงื่อนไขผ่อน';
+          document.getElementById('m-rest-label').innerText = 'ยอดคงเหลือ (ตกลงกับแอดมิน)';
+          document.getElementById('m-days-2').innerText = 'สอบถามผ่อน';
+        }
+
+        const steps = [
+          'วางเงินดาวน์ 40% เป็นเงิน <b>' + baht(inst.down) + '</b> แล้วรับไอดีไปใช้งานได้ทันที',
+          inst.days
+            ? 'ผ่อนยอดคงเหลือ <b>' + baht(inst.rest) + '</b> ให้ครบภายใน <b>' + inst.days + ' วัน</b>'
+            : 'ยอดคงเหลือ <b>' + baht(inst.rest) + '</b> กรุณาตกลงระยะเวลาผ่อนกับแอดมิน',
+          'แจ้งรหัสสินค้า <b>' + item.productCode + '</b> กับแอดมินทาง LINE เพื่อเริ่มทำรายการ'
+        ];
+        document.getElementById('m-steps').innerHTML =
+          steps.map(function(s){ return '<li>' + s + '</li>'; }).join('');
+
+        document.getElementById('item-modal').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal(){
+        document.getElementById('item-modal').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+
+      document.getElementById('year').innerText = new Date().getFullYear() + 543;
+
+      /* ─────────────────────────────────────────────
+         ตรงนี้คือจุดเดียวที่ต้องแก้
+         เอาลิงก์ /exec ของแอพสคริปมาวางแทนข้อความข้างล่าง
+         ───────────────────────────────────────────── */
+      const API_URL = 'https://script.google.com/macros/s/AKfycbxwvCrpj4evRYQaKejoPIYPheZsin-HD3lIr1iGvIJvJrXx6Y1UoAJgZRMnIqJhf4a9/exec';
+
+      function showLoadError(msg){
+        document.getElementById('content-area').innerHTML =
+          '<div class="empty"><b>โหลดข้อมูลไม่สำเร็จ</b>' +
+          (msg ? String(msg) : 'ลองรีเฟรชหน้าอีกครั้ง') +
+          '<br>ถ้ายังไม่ขึ้น ทักแอดมินได้เลย</div>';
+      }
+
+      /* ดึงข้อมูลสินค้าจากแอพสคริปแบบ JSONP (ไม่ติดปัญหา CORS ของเบราว์เซอร์) */
+      function loadItems(){
+        if (!API_URL || API_URL.indexOf('http') !== 0){
+          showLoadError('ยังไม่ได้ใส่ลิงก์ /exec ของแอพสคริปในไฟล์นี้');
+          return;
+        }
+
+        const cbName = '__store_cb_' + Date.now();
+        const script = document.createElement('script');
+        let done = false;
+
+        const cleanup = function(){
+          try { delete window[cbName]; } catch (e) { window[cbName] = undefined; }
+          if (script.parentNode) script.parentNode.removeChild(script);
+        };
+
+        window[cbName] = function(res){
+          done = true;
+          cleanup();
+          if (!res || res.ok === false){
+            showLoadError(res && res.error ? res.error : '');
+            return;
+          }
+          allItems = res.items || [];
+          buildHeroStats();
+          buildHeroCards();
+          renderGrid();
+        };
+
+        script.onerror = function(){ done = true; cleanup(); showLoadError('ติดต่อเซิร์ฟเวอร์ไม่ได้'); };
+        script.src = API_URL + (API_URL.indexOf('?') === -1 ? '?' : '&') +
+                     'api=items&callback=' + cbName + '&_=' + Date.now();
+        document.body.appendChild(script);
+
+        setTimeout(function(){ if (!done){ cleanup(); showLoadError('เซิร์ฟเวอร์ตอบช้าเกินไป'); } }, 25000);
+      }
+
+      loadItems();
+    </script>
+  </body>
+</html>
