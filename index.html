@@ -1184,16 +1184,34 @@ body{background:var(--bg);line-height:1.6}.wrap{width:min(1200px,calc(100% - 48p
             imageUrl:/^https:\/\/lh3\.googleusercontent\.com\/d\/[A-Za-z0-9_-]+$/.test(item.imageUrl||'') ? item.imageUrl : '' };
         });
         buildHeroStats(); buildHeroCards(); renderGrid();
+        storeTries = 0;                 // โหลดสำเร็จแล้ว รีเซ็ตตัวนับไว้ใช้รอบหน้า
       }
+      /* เวลารอเซิร์ฟเวอร์
+         ของเดิมรอแค่ 12 วิ ซึ่งสั้นเกินไป ตอนที่แอปสคริปต์เพิ่งตื่นและต้องไล่โฟลเดอร์
+         มันใช้เวลามากกว่านั้น หน้าเว็บเลยยอมแพ้ทั้งที่เซิร์ฟเวอร์กำลังทำงานอยู่ดี ๆ
+         ตอนนี้รอ 45 วิ และถ้ารอบแรกไม่ทันจริง ๆ จะลองใหม่ให้เองอีก 1 ครั้ง */
+      const STORE_TIMEOUT_MS = 45000;
+      const STORE_MAX_TRIES  = 2;
+      let storeTries = 0;
+
+      function retryStorefront() { storeTries = 0; loadStorefront(); }
+
       function storeLoadError() {
+        if (storeTries < STORE_MAX_TRIES) {
+          document.getElementById('content-area').innerHTML =
+            '<div class="empty" role="status">เซิร์ฟเวอร์ตอบช้ากว่าปกติ กำลังลองใหม่อีกครั้ง…</div>';
+          setTimeout(loadStorefront, 1500);
+          return;
+        }
         document.getElementById('result-count').textContent = '';
-        document.getElementById('content-area').innerHTML = '<div class="empty"><b>ยังเชื่อมต่อข้อมูลสินค้าไม่ได้</b>การเชื่อมต่ออาจล่าช้าหรือเว็บแอปยังไม่พร้อมให้เข้าถึง กรุณาลองอีกครั้ง<br><button class="btn primary sm" style="margin-top:16px" onclick="loadStorefront()">ลองอีกครั้ง</button></div>';
+        document.getElementById('content-area').innerHTML = '<div class="empty"><b>ยังเชื่อมต่อข้อมูลสินค้าไม่ได้</b>การเชื่อมต่ออาจล่าช้าหรือเว็บแอปยังไม่พร้อมให้เข้าถึง กรุณาลองอีกครั้ง<br><button class="btn primary sm" style="margin-top:16px" onclick="retryStorefront()">ลองอีกครั้ง</button></div>';
       }
       function loadStorefront() {
+        storeTries++;
         document.getElementById('content-area').innerHTML = '<div class="empty" role="status">กำลังโหลดรายการสินค้า…</div>';
         if (window.google && google.script && google.script.run) {
           let settled = false;
-          const rpcTimer = setTimeout(function(){ if (!settled) { settled = true; storeLoadError(); } },12000);
+          const rpcTimer = setTimeout(function(){ if (!settled) { settled = true; storeLoadError(); } },STORE_TIMEOUT_MS);
           google.script.run.withSuccessHandler(function(items) {
             if (settled) return; settled = true; clearTimeout(rpcTimer);
             try { acceptStoreItems(items); } catch(e) { storeLoadError(); }
@@ -1216,7 +1234,7 @@ body{background:var(--bg);line-height:1.6}.wrap{width:min(1200px,calc(100% - 48p
           if (!payload || payload.ok !== true || !Array.isArray(payload.items)) { storeLoadError(); return; }
           try { acceptStoreItems(payload.items); } catch(e) { storeLoadError(); }
         }
-        const timer = setTimeout(function(){finish(null);},12000);
+        const timer = setTimeout(function(){finish(null);},STORE_TIMEOUT_MS);
         window[callback] = finish;
         script.onerror = function(){finish(null);};
         script.src = STOREFRONT_API_URL + '?api=items&callback=' + callback;
