@@ -52,6 +52,28 @@
   --them:#efeaf9; --node:#ffffff;
   color-scheme:light;
 }
+/* ยังไม่เคยกดปุ่ม: ตามโหมดของเครื่อง */
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+  --bg:#faf8ff; --bg2:#f3efff; --surface:#fff;
+  --line:rgba(26,14,54,.11); --line-2:rgba(26,14,54,.2);
+  --glass:rgba(255,255,255,.75); --glass-2:#fff;
+  --text:#191330; --muted:#574f72; --dim:#6e6589;
+  --p:#7c3aed; --p2:#8b43f0; --p3:#6d28d9; --on-p:#fff;
+  --glow:rgba(124,58,237,.28); --glow-soft:rgba(124,58,237,.14);
+  --chip-bg:rgba(124,58,237,.12); --chip-fg:#6d28d9;
+  --ok:#0f7a52; --ok-bg:rgba(15,122,82,.11);
+  --warn:#8a5008; --warn-bg:rgba(138,80,8,.1);
+  --pill-bg:#191330; --pill-fg:#fff;
+  --shot:#ebe4fa;
+  --aura-1:rgba(168,85,247,.18); --aura-2:rgba(124,58,237,.12);
+  --final-aura:rgba(168,85,247,.2);
+  --sk-1:rgba(26,14,54,.06); --sk-2:rgba(26,14,54,.11);
+  --sk-hi:rgba(255,255,255,.7); --sk-glow:rgba(124,58,237,.12);
+  --them:#efeaf9; --node:#ffffff;
+  color-scheme:light;
+}
+}
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -93,6 +115,10 @@ nav .wrap{display:flex;align-items:center;gap:14px;min-height:70px}
 .theme .i-sun{display:none}
 :root[data-theme="light"] .theme .i-sun{display:block}
 :root[data-theme="light"] .theme .i-moon{display:none}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]) .theme .i-sun{display:block}
+  :root:not([data-theme="dark"]) .theme .i-moon{display:none}
+}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
   background:linear-gradient(135deg,var(--p),var(--p3));color:var(--on-p);
@@ -1375,7 +1401,8 @@ function setLang(next){
   if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
   window.toggleTheme = function(){
     var cur = document.documentElement.dataset.theme;
-    var dark = cur ? cur === 'dark' : true;
+    var sysLight = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches;
+    var dark = cur ? cur === 'dark' : !sysLight;
     var next = dark ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
     try { localStorage.setItem(KEY, next); } catch(e){}
